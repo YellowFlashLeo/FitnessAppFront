@@ -1,0 +1,679 @@
+:root {
+  --color-background: #1e1e1e;
+  --color-primary: #c99e71;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --font-text: "Urbanist, sans-serif";
+  --font-name: "Righteous, cursive";
+  --font-extra: "Inter, sans-serif";
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.inner-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
+.pagedivider {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+}
+
+.pagedivider .mealExercises-wrapper,
+.pagedivider .mealExercises-wrapper {
+  grid-template-columns: repeat(auto-fill, 26rem);
+}
+
+.pagedivider .mealExercise,
+.pagedivider .mealExercise {
+  height: 17rem;
+}
+
+.pagedivider .content__name,
+.pagedivider .content__name {
+  top: 1px;
+  font-size: 1.6rem;
+}
+
+.pagedivider .record__exercises {
+  font-size: 1.5rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+
+/* header */
+#header-section {
+  margin-bottom: 3.3rem;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  padding-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-username {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: var(--color-primary);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-logo__img,
+.footer-logo-wrap {
+  width: 9rem;
+  height: 7.4rem;
+}
+
+.nav-main__list {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-main__item,
+.nav-main-right__item {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.nav-main__link:hover {
+  color: var(--color-primary);
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.activated-nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.activated-nav-main__list {
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 850px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav-main__list {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 3.8rem;
+    opacity: 1;
+  }
+
+  .nav-main__item,
+  .nav-main-right__item {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+}
+
+/*   Error   */
+.error-title {
+  margin-top: 5rem;
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 9.3rem;
+}
+
+.error-text {
+  margin-top: 3.2rem;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  line-height: 3.6rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hero */
+#hero-section {
+  margin-bottom: 10rem;
+  background: url(src/icons/zyzz.png) 50% / cover no-repeat;
+  position: relative;
+}
+
+.hero {
+  padding: 20.7rem 0 16.6rem 0;
+  max-width: 529px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 9.3rem;
+}
+
+.hero-text {
+  margin-top: 3.2rem;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  line-height: 3.6rem;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-btn {
+  padding: 2.4rem 4rem;
+  background-color: var(--color-primary);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-btn:hover {
+  background-color: rgb(170, 106, 22);
+}
+
+.summary-btn {
+  margin: 7rem 0 0 44%;
+}
+
+/* User form */
+.userInput-form {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 95px;
+  border: 2px solid #f00;
+  box-shadow: 0 0 20px #f00;
+}
+
+.foodInput-form {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 95px;
+  border: 2px solid #f00;
+  box-shadow: 0 0 20px #f00;
+}
+
+.foodInput-inputs {
+  padding: 0.2rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.userInput-exName {
+  padding: 1.3rem 2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: #fff2cc;
+  background-color: #444;
+}
+
+.userInput-inputs {
+  padding: 0.2rem 2rem;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.userInput-block {
+  padding: 1rem 0;
+  display: block;
+  color: var(--color-black);
+}
+
+.input__label {
+  display: block;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+}
+
+.input {
+  display: block;
+  padding: 1rem 0 1rem 0.4rem;
+  border: 1px solid var(--color-black);
+  font-size: 1.6rem;
+}
+
+.userInput-btnWrappers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.userInput-btn {
+  margin: 1.3rem;
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  background-color: #6c757d;
+}
+
+.userInput-btn:last-of-type {
+  background-color: #28a745;
+}
+
+@media screen and (min-width: 1208px) {
+  .userInput-form,
+  .foodInput-form {
+    width: 700px;
+    height: 295px;
+  }
+}
+
+/*  Content  */
+#content-section {
+  margin-bottom: 14rem;
+}
+
+.content__title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 9.3rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  justify-content: center;
+}
+
+.content {
+  height: 42rem;
+  position: relative;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 5.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.content:hover {
+  transform: scale(1.1);
+}
+
+.content__name {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.content__link {
+  position: absolute;
+  padding-right: 30px;
+  bottom: 48px;
+  right: 60px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: var(--color-primary);
+}
+
+.content__link::after {
+  position: absolute;
+  content: url(src/icons/arrow.png);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+/* mealExercise  */
+.mealExercises-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40rem);
+  gap: 4rem;
+  justify-content: center;
+}
+
+.mealExercise {
+  height: 42rem;
+  position: relative;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 5.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mealExercise:hover {
+  transform: scale(1.1);
+}
+
+/*  Records   */
+
+.records-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  column-gap: 4rem;
+}
+
+.record {
+  margin-bottom: 5rem;
+  min-height: 12rem;
+  width: 100%;
+  background-color: var(--color-black);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 12rem;
+}
+
+.records-btn {
+  width: 50%;
+  display: block;
+  margin: 2rem auto;
+}
+
+.record-deleteBtn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.record__title-wrapper {
+  padding: 2rem 6rem 0rem 6rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.record__inner-data {
+  padding: 0 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: grey;
+}
+
+.record__exercises {
+  padding: 1rem 0 2rem 7rem;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: grey;
+}
+
+.record__exercise {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*  Summary  */
+
+.record__summary-title {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.record__summary-wrapper {
+  padding: 2rem 6rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  column-gap: 1.4rem;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: grey;
+}
+
+.summary-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.summary {
+  width: 100%;
+  background-color: var(--color-black);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.summary__half-title {
+  padding: 2.5rem 0 4rem 2rem;
+  font-size: 3.4rem;
+  font-weight: 500;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.summary__list-name {
+  padding: 0 0 1.3rem 2rem;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: var(--color-white);
+}
+
+.summary__list {
+  padding: 0 0 3rem 4rem;
+}
+
+.summary__list-explain {
+  padding-left: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: var(--color-white);
+}
+
+.summary__list-item-stats {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: grey;
+}
+
+.summary__list-item-sum {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: var(--color-white);
+}
+
+/*   Sign In   */
+
+#signIn-section {
+  margin-top: 10rem;
+}
+
+.signIn-title {
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+  line-height: 9.3rem;
+  color: var(--color-primary);
+}
+
+.signIn-form {
+  margin: 0 auto 7rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.singIn-input {
+  margin-bottom: 3rem;
+  padding: 1.4rem 0 1.4rem 2rem;
+  width: 52rem;
+  background-color: var(--color-black);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  font-size: 2rem;
+  color: grey;
+  font-weight: 400;
+  font-family: "Righteous", sans-serif;
+}
+
+.signIn-btn {
+  margin-top: 2rem;
+}
+
+.signIn-link {
+  margin: 1.5rem auto 1.5rem auto;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Righteous", sans-serif;
+  line-height: 3rem;
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 850px) {
+  .singIn-input {
+    margin-bottom: 3rem;
+    padding: 1.4rem 0 1.4rem 2rem;
+    width: 73rem;
+    background-color: var(--color-black);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    font-size: 2rem;
+    color: grey;
+    font-weight: 400;
+    font-family: "Righteous", sans-serif;
+  }
+}
